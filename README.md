@@ -33,7 +33,7 @@ pull request, merge pull request and issue commit and more.
 8. now in github-actions-demo.yaml file we will configure it for actions
 9. after created the configuration and push in github, In Action tab in github u will find the workflows
 10. u can select the workflows and see the inside of the workflows
-11. for continues testing integration we use mocha chai supertest so follow 11.1, 11.2 then run "npm install --save-dev mocha chai supertest"
+11. for continues testing integration we use mocha chai supertest so follow 11.1, 11.2 then run "npm install --save-dev mocha chai@4 supertest"
 12. created a test folder with the file name app.test.js
 13. update the package.json file script:
     "scripts": {
