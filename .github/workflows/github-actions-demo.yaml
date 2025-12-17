@@ -1,0 +1,34 @@
+# event
+# in main branches when push occurs
+name: First Demo Action
+on:
+  push:
+    branches: -main
+
+# jobs
+#  what work will be done
+jobs:
+  demo-job: #name of the job
+    runs-on: ubuntu-latest
+    # what will be the steps or action upon runs-on: ubuntu-latest
+    # steps (array)
+    steps:
+      # run script
+      - run: echo "Action started"
+      - name: Checkout # Checkout is used when we want to work with source code i.e source code file, push, build needed, also checkout in my branch.
+        # Actions
+        uses: actions/checkout@v4 #when we run other's action (actions that are found in market place ) we use "uses". If we click on the actions/checkout@v4 it will go to the github market place or u can search in google.
+      - name: Run a multiline script
+        run: |
+          echo add other action to build, 
+          echo test, and deploy your project.
+      - name: List files
+        # in my repository run my all files but if u type only ls it will run the OS but if u type ls ${{github.workspace}} it will run all the files in my repository
+        run: ls ${{github.workspace}}
+        # if u want to see the github context
+      - name: Print Github context
+        env:
+          GITHUB_CONTEXT: ${{toJson(github)}}
+        run: echo "$GITHUB_CONTEXT"
+      - name: Action Completed
+        run: echo "Action Complete"
