@@ -1,0 +1,18 @@
+# 17. created a test.yaml
+- name: test using mocha
+  on: [push]
+
+  jobs:
+    test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+      - name: Install Dependencies
+        run: npm install
+      - name: Run test
+        run: npm test
+      - run: echo "All test passed"
