@@ -43,5 +43,5 @@ pull request, merge pull request and issue commit and more.
 14. In terminal run "npm start" to start the server
 15. In terminal run "npm test"
 16. as we will test it on the fly i.e upon push on github, github action will test.
-17. created a test.yaml
-18.
+17. created a test.yaml and configure
+18. now push to git u will see testing is successfully completed according to the configuration.
