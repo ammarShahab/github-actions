@@ -44,3 +44,4 @@ pull request, merge pull request and issue commit and more.
 15. In terminal run "npm test"
 16. as we will test it on the fly i.e upon push on github, github action will test.
 17. created a test.yaml
+18.
