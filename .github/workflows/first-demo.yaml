@@ -3,7 +3,8 @@
 name: First Demo Action
 on:
   push:
-    branches: -main
+    branches:
+      - main
 
 # jobs
 #  what work will be done
